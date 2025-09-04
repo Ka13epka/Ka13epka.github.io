@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Персональное портфолио Егора - разработчика игр">
+    <title>Егор | Разработчик игр</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#38bdf8',
+                        neon: '#00f5d4',
+                    },
+                    fontFamily: {
+                        'heading': ['"Press Start 2P"', 'cursive'],
+                        'body': ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background: radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 1) 90%);
+        }
+        .skill-bar {
+            height: 4px;
+            background: rgba(56, 189, 248, 0.2);
+        }
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8 0%, #00f5d4 100%);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 245, 212, 0.3);
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #00f5d4, 0 0 10px #00f5d4;
+        }
+    </style>
+</head>
+<body class="bg-primary text-gray-100 font-body">
+    <!-- Навигация -->
+    <nav class="fixed w-full bg-primary/90 backdrop-blur-md z-50 border-b border-secondary">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-heading neon-text">Калерkа<span class="text-accent">.</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-accent transition">Главная</a>
+                    <a href="#about" class="hover:text-accent transition">Обо мне</a>
+                    <a href="#portfolio" class="hover:text-accent transition">Портфолио</a>
+                    <a href="#contact" class="hover:text-accent transition">Контакты</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Мобильное меню -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-primary/95 z-40 flex items-center justify-center">
+        <div class="text-center space-y-8">
+            <a href="#home" class="block text-2xl hover:text-accent transition">Главная</a>
+            <a href="#about" class="block text-2xl hover:text-accent transition">Обо мне</a>
+            <a href="#portfolio" class="block text-2xl hover:text-accent transition">Портфолио</a>
+            <a href="#contact" class="block text-2xl hover:text-accent transition">Контакты</a>
+        </div>
+    </div>
+
+    <!-- Hero секция -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md: mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-heading mb-6">Всем привет, а с вами как обычно я, <span class="text-accent">Калерkа</span></h1>
+                    <h2 class="text-2xl md:text-3xl mb-6 neon-text">Разработчик игр и Ютубер</h2>
+                    <p class="text-lg mb-8 text-gray-300 max-w-lg">Создаю захватывающие игровые миры с уникальной механикой и запоминающейся графикой. Моя страсть - превращать идеи в интерактивные впечатления.</p>
+                    <div class="flex space-x-4">
+                        <a href="#portfolio" class="bg-accent hover:bg-accent/80 text-primary font-bold py-3 px-6 rounded-lg transition">Мои работы</a>
+                        <a href="#contact" class="border border-accent text-accent hover:bg-accent/10 font-bold py-3 px-6 rounded-lg transition">Связаться</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-heading text-center mb-16" data-aos="fade-up">Обо <span class="text-accent">мне</span></h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Моя история</h3>
+                    <p class="mb-4 text-gray-300">(тут ничего)</p>
+                    
+                </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="py-20 bg-primary">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-heading text-center mb-16" data-aos="fade-up">Мои <span class="text-accent">работы</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Проект 1 -->
+                <div class="project-card bg-secondary rounded-lg overflow-hidden border border-secondary transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/gaming/640x360/1" alt="Космические приключения" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Космические приключения</h3>
+                        <p class="text-gray-300 mb-4">3D-платформер с элементами головоломки в космической тематике.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">Unity</span>
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">C#</span>
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">3D</span>
+                        </div>
+                        <a href="#" class="text-accent hover:underline flex items-center">
+                            Подробнее <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Проект 2 -->
+                <div class="project-card bg-secondary rounded-lg overflow-hidden border border-secondary transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/gaming/640x360/2" alt="Лесная легенда" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Лесная легенда</h3>
+                        <p class="text-gray-300 mb-4">2D-платформер с красивой пиксельной графикой и увлекательным сюжетом.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">Unity</span>
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">C#</span>
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">Pixel Art</span>
+                        </div>
+                        <a href="#" class="text-accent hover:underline flex items-center">
+                            Подробнее <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Проект 3 -->
+                <div class="project-card bg-secondary rounded-lg overflow-hidden border border-secondary transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/gaming/640x360/3" alt="Город теней" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Город теней</h3>
+                        <p class="text-gray-300 mb-4">Приключенческий экшен с элементами стелса в стиле нуар.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">Unreal</span>
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">C++</span>
+                            <span class="bg-primary/50 text-accent px-3 py-1 rounded-full text-sm">3D</span>
+                        </div>
+                        <a href="#" class="text-accent hover:underline flex items-center">
+                            Подробнее <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-heading text-center mb-16" data-aos="fade-up">Свяжитесь <span class="text-accent">со мной</span></h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Давайте работать вместе!</h3>
+                    <p class="text-gray-300 mb-8">Если у вас есть проект, который вы хотите обсудить, или просто хотите поздороваться, напишите мне.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="mail" class="text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <a href="mailto:egor@gamedev.ru" class="text-gray-300 hover:text-accent transition">egor@gamedev.ru</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="phone" class="text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Телефон</h4>
+                                <a href="tel:+79123456789" class="text-gray-300 hover:text-accent transition">+7 (912) 345-67-89</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="map-pin" class="text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Локация</h4>
+                                <p class="text-gray-300">Москва, Россия</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Социальные сети</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-primary/50 hover:bg-accent/20 rounded-full flex items-center justify-center transition">
+                                <i data-feather="github" class="text-accent"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/50 hover:bg-accent/20 rounded-full flex items-center justify-center transition">
+                                <i data-feather="linkedin" class="text-accent"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/50 hover:bg-accent/20 rounded-full flex items-center justify-center transition">
+                                <i data-feather="twitter" class="text-accent"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/50 hover:bg-accent/20 rounded-full flex items-center justify-center transition">
+                                <i data-feather="telegram" class="text-accent"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2">Ваше имя</label>
+                            <input type="text" id="name" class="w-full bg-primary/50 border border-secondary focus:border-accent rounded-lg px-4 py-3 focus:outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-primary/50 border border-secondary focus:border-accent rounded-lg px-4 py-3 focus:outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2">Тема</label>
+                            <input type="text" id="subject" class="w-full bg-primary/50 border border-secondary focus:border-accent rounded-lg px-4 py-3 focus:outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2">Сообщение</label>
+                            <textarea id="message" rows="5" class="w-full bg-primary/50 border border-secondary focus:border-accent rounded-lg px-4 py-3 focus:outline-none transition"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent hover:bg-accent/80 text-primary font-bold py-3 px-6 rounded-lg transition">
+                            Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-primary py-8 border-t border-secondary">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-heading neon-text">EGOR<span class="text-accent">.</span></a>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    <p>© 2023 Егор. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Инициализация AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Мобильное меню
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                feather.replace();
+            } else {
+                feather.replace();
+            }
+        });
+
+        // Закрытие меню при клике на ссылку
+        const menuLinks = document.querySelectorAll('#mobile-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Плавный скролл
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Замена иконок
+        feather.replace();
+    </script>
+</body>
+</html>
