@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(tile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 10px 5%;
+}
+
+header > * {
+    display: inline-block;
+}
+
+h2 {
+    margin-right: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+}
+.banner {
+    color: white;
+    font-size: 30px;
+    padding: 20% 5%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.post {
+    background-color: white;
+    padding: 10% 10%;
+}
+.post > * {
+    display: inline-block;
+    font-size: 30px;
+    width: 450px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.post:hover > * {
+    transform: scale(1.02);
+}
+.razeyv {
+    height: 700px;
+}
+
+#finle {
+    background-image: url(https://avatars.dzeninfra.ru/get-zen_doc/5234856/pub_637c73e0c613f77a96897c68_637c73e3c613f77a96897ed2/scale_1200);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 15% 30%;
+}
+
+article > div {
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    font-size: 30px;
+    border: 4px solid black;
+}
+footer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#text {
+    color: white;
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.card-button {
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.debit {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+}
+
+.credit {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+}
+
+.card-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+/* Убрали bottom: -150px, он ломал якоря */
+#firstmain {
+    position: relative;
+    z-index: 1;
+}
+
+/* Для корректной прокрутки якорей */
+#info, #finle {
+    scroll-margin-top: 120px;
+}
