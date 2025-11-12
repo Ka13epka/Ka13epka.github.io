@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(tile.png);
+    background-image: url(https://img.freepik.com/free-photo/cyber-monday-sale-credit-cards-keyboard_23-2148670014.jpg?semt=ais_hybrid&w=740&q=80);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -14,7 +14,7 @@ body {
 
 header {
     background-color: white;
-    padding: 10px 5%;
+    padding: 8px 5%;
 }
 
 header > * {
@@ -159,4 +159,7 @@ video {
 /* Для корректной прокрутки якорей */
 #info, #finle {
     scroll-margin-top: 120px;
+}
+img{
+    border-radius: 10%;
 }
